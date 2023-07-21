@@ -61,12 +61,13 @@ setTimeout(() => console.log("chiamate filtrate", user1.filtraChiamatePerDataOra
 // user1.azzeraChiamate()
 // console.log(user1.mostraRegistroChiamate());
 let users = [];
-let instance;
+// let instance:User
 let createPhone = document.getElementById("createSmart");
 let mainRow = document.getElementById("mainRow");
 createPhone === null || createPhone === void 0 ? void 0 : createPhone.addEventListener("click", () => {
-    instance = new User(0, 0, 0.20, [{ id: 0, durata: 0, dataEora: "" }]);
+    let instance = new User(0, 0, 0.20, [{ id: 0, durata: 0, dataEora: "" }]);
     users.push(instance);
+    console.log(users);
     let thisPhone = document.createElement("div");
     thisPhone.classList.add("card", "col-3");
     thisPhone.innerHTML = `
